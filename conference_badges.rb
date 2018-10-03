@@ -14,18 +14,18 @@ def assign_rooms(array)
   new_array = []
   counter = 1
   array.each do |name|
-    new_array<< ("Hello, my name is #{name}! You'll be assigned to room #{counter}!")
+    new_array<< ("Hello, #{name}! You'll be assigned to room #{counter}!")
     counter += 1
   end
   new_array
 end
 
-def printer
-  batch_badge_creator(array).each do |id|
-    puts id
+def printer(attendees)
+  batch_badge_creator(array).each do |attendee|
+    puts attendee
   end
 
-  assign_rooms(array).each do |id|
-    puts id
+  assign_rooms(array).each do |attendee|
+    puts attendee
   end
 end
